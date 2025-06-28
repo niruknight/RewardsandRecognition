@@ -1,0 +1,424 @@
+/* Manager Page Styles */
+.create-award {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .container {
+    padding: 2rem 0;
+  }
+  
+  .award-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .award-header h1 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .view-controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .view-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .view-btn.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+  }
+  
+  .view-btn:not(.active):hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Award Details */
+  .award-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .award-selection {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .month-select,
+  .category-select {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 0.9rem;
+    min-width: 200px;
+  }
+  
+  .month-select:focus,
+  .category-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .view-nominations-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .view-nominations-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Filters Section */
+  .filters-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .filters-section h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .filter-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .search-input,
+  .id-input,
+  .department-select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+  }
+  
+  .search-input:focus,
+  .id-input:focus,
+  .department-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .clear-filters-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .clear-filters-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Card View */
+  .card-view-container {
+    margin-bottom: 2rem;
+  }
+  
+  .navigation-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .nav-btn:hover:not(:disabled) {
+    background-color: #f8f9fa;
+  }
+  
+  .nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination-info {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .employee-container {
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .employee-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    height: 100%;
+  }
+  
+  .employee-card.animate {
+    transform: translateY(20px);
+    opacity: 0.5;
+  }
+  
+  .employee-card.nominated {
+    border: 2px solid #2ecc71;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .employee-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .employee-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #f8f9fa;
+  }
+  
+  .employee-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .employee-info {
+    flex: 1;
+  }
+  
+  .employee-info h3 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+  }
+  
+  .employee-id,
+  .employee-dept {
+    margin: 0.25rem 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  .employee-achievements {
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .employee-achievements h4 {
+    margin: 0 0 0.75rem 0;
+    color: #34495e;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  
+  .employee-achievements p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .nominate-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+  }
+  
+  .nominate-btn:hover:not(:disabled) {
+    background-color: #2980b9;
+  }
+  
+  .nominate-btn:disabled {
+    background-color: #2ecc71;
+    cursor: not-allowed;
+  }
+  
+  /* List View */
+  .list-view-container {
+    margin-bottom: 2rem;
+    overflow-x: auto;
+  }
+  
+  .employees-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .employees-table th,
+  .employees-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .employees-table th {
+    background-color: #f8f9fa;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .employees-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .employees-table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .nominated-row {
+    background-color: rgba(46, 204, 113, 0.1);
+  }
+  
+  .list-nominate-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .list-nominate-btn:hover:not(:disabled) {
+    background-color: #2980b9;
+  }
+  
+  .list-nominate-btn.nominated-btn {
+    background-color: #2ecc71;
+  }
+  
+  .list-nominate-btn:disabled {
+    cursor: not-allowed;
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    color: #7f8c8d;
+  }
+  
+  .clear-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .award-header,
+    .award-details,
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .award-selection {
+      flex-direction: column;
+    }
+  
+    .filter-group {
+      width: 100%;
+    }
+  
+    .employee-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .employee-info {
+      text-align: center;
+    }
+  }
+  
+  

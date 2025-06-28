@@ -1,0 +1,208 @@
+/* Awards Page Styles */
+.awards-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .awards-section h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+  
+  .awards-section p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .awards-section label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: #34495e;
+  }
+  
+  .awards-section select {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .awards-section select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .error {
+    color: #e74c3c;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Star of the Month Section */
+  .star-of-the-month {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .star-of-the-month::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50 0 L63 38 L100 38 L69 61 L81 100 L50 77 L19 100 L31 61 L0 38 L37 38 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+    background-repeat: repeat;
+    opacity: 0.2;
+    z-index: 0;
+  }
+  
+  .crown-icon {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  }
+  
+  .profile-container {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+  }
+  
+  .star-name {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .star-of-the-month h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .star-of-the-month p {
+    color: #fff;
+    font-size: 1.1rem;
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Awards Container */
+  .awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .award-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid #3498db;
+  }
+  
+  .award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .award-card h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .winner-info {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  .winner-info:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .winner-info p {
+    margin: 0.5rem 0;
+    text-align: left;
+    color: #34495e;
+  }
+  
+  .winner-info p strong {
+    color: #2c3e50;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .awards-section h1 {
+      font-size: 2rem;
+    }
+  
+    .awards-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .star-of-the-month {
+      padding: 1.5rem;
+    }
+  
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .star-name {
+      font-size: 1.5rem;
+    }
+  
+    .star-of-the-month h3 {
+      font-size: 1.7rem;
+    }
+  }
+  
+  
